@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="local_user"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-18 12:15:22 "/>
+        <attribute name="created" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0xODsiMTE6NTU6MTkgIjszMzIw"/>
+        <attribute name="edited" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0xODsiMTI6MTU6MjIgIjsxOzM0MTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="size, count" type="Integer" array="False" size=""/>
+            <assign variable="size" expression="12"/>
+            <declare name="movies" type="String" array="True" size="size"/>
+            <assign variable="count" expression="0"/>
+            <while expression="count&lt;size">
+                <output expression="&quot;Entrer le nom d'un film&quot;" newline="True"/>
+                <input variable="movies[count]"/>
+                <assign variable="count" expression="count+1"/>
+            </while>
+            <assign variable="count" expression="0"/>
+            <while expression="count&lt;size">
+                <output expression="movies[count]" newline="True"/>
+                <assign variable="count" expression="count+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

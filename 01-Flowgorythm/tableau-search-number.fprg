@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="local_user"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-19 09:59:18 "/>
+        <attribute name="created" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0xOTsiMDk6NDU6NTAgIjszMzIy"/>
+        <attribute name="edited" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0xOTsiMDk6NTk6MTggIjsyOzM0NDA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="size, i, j, search, position" type="Integer" array="False" size=""/>
+            <declare name="match" type="Boolean" array="False" size=""/>
+            <assign variable="size" expression="10"/>
+            <assign variable="match" expression="false"/>
+            <declare name="T" type="Integer" array="True" size="size"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <assign variable="T[i]" expression="random(101)"/>
+            </for>
+            <output expression="&quot;Enter a number to search&quot;" newline="True"/>
+            <input variable="search"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <if expression="T[i]==search">
+                    <then>
+                        <assign variable="position" expression="i"/>
+                        <assign variable="match" expression="true"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="match">
+                <then>
+                    <output expression="search &amp; &quot; trouv&#233; &#224; la position : &quot; &amp; position" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Auncun r&#233;sultat.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="comateen"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-05-06 10:36:13 "/>
+        <attribute name="created" value="Y29tYXRlZW47REVTS1RPUC1IS0oxTzhTOzIwMjEtMDUtMDY7IjA5OjQ3OjE1ICI7MzExMg=="/>
+        <attribute name="edited" value="Y29tYXRlZW47REVTS1RPUC1IS0oxTzhTOzIwMjEtMDUtMDY7IjEwOjMyOjE0ICI7MTtjb21hdGVlbjtERVNLVE9QLUhLSjFPOFM7MjAyMS0wNS0wNjsiMDg6NTk6MDAgIjt0YWJUcmlCb29sLmZwcmc7NzkxOA=="/>
+        <attribute name="edited" value="Y29tYXRlZW47REVTS1RPUC1IS0oxTzhTOzIwMjEtMDUtMDY7IjEwOjM2OjEzICI7MTszMjA4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="taille1, taille2, i, j, temp" type="Integer" array="False" size=""/>
+            <declare name="desordre" type="Boolean" array="False" size=""/>
+            <assign variable="desordre" expression="true"/>
+            <assign variable="taille1" expression="6"/>
+            <assign variable="taille2" expression="8"/>
+            <declare name="tab1" type="Integer" array="True" size="taille1"/>
+            <declare name="tab2" type="Integer" array="True" size="taille2"/>
+            <declare name="tab3" type="Integer" array="True" size="taille1+taille2"/>
+            <for variable="i" start="0" end="taille1-1" direction="inc" step="1">
+                <assign variable="tab1[i]" expression="Random(101)"/>
+                <output expression="tab1[i] &amp; &quot; | &quot;" newline="False"/>
+            </for>
+            <output expression="&quot;&quot;" newline="True"/>
+            <for variable="i" start="0" end="taille2-1" direction="inc" step="1">
+                <assign variable="tab2[i]" expression="Random(101)"/>
+                <output expression="tab2[i] &amp; &quot; | &quot;" newline="False"/>
+            </for>
+            <output expression="&quot;&quot;" newline="True"/>
+            <assign variable="j" expression="0"/>
+            <for variable="i" start="0" end="taille1-1" direction="inc" step="1">
+                <assign variable="tab3[j]" expression="tab1[i]"/>
+                <assign variable="j" expression="j+1"/>
+            </for>
+            <for variable="i" start="0" end="taille2-1" direction="inc" step="1">
+                <assign variable="tab3[j]" expression="tab2[i]"/>
+                <assign variable="j" expression="j+1"/>
+            </for>
+            <while expression="desordre">
+                <assign variable="desordre" expression="false"/>
+                <for variable="i" start="0" end="(taille1+taille2)-2" direction="inc" step="1">
+                    <if expression="tab3[i]&gt;tab3[i+1]">
+                        <then>
+                            <assign variable="temp" expression="tab3[i]"/>
+                            <assign variable="tab3[i]" expression="tab3[i+1]"/>
+                            <assign variable="tab3[i+1]" expression="temp"/>
+                            <assign variable="desordre" expression="true"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </while>
+            <for variable="i" start="0" end="(taille1+taille2)-1" direction="inc" step="1">
+                <output expression="tab3[i] &amp; &quot; | &quot;" newline="False"/>
+            </for>
+            <output expression="&quot;&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

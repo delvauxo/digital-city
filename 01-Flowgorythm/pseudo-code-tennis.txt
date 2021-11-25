@@ -1,0 +1,9 @@
+variables pret : false, panierVide : true
+
+Debut
+    Si panierVide = false && pret = true Alors 
+        Ecrire ("le lanceur peut lancer une balle")
+    Sinon
+        Ecrire ("le lanceur ne peut pas lancer de balle")
+    FinSi
+Fin

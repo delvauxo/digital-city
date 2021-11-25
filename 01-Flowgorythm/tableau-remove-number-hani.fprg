@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Local_user"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-19 03:46:43 "/>
+        <attribute name="created" value="TG9jYWxfdXNlcjtERVNLVE9QLVM2T1RTUzE7MjAyMS0xMS0xOTsiMDI6MDk6MzYgIjszMzIz"/>
+        <attribute name="edited" value="TG9jYWxfdXNlcjtERVNLVE9QLVM2T1RTUzE7MjAyMS0xMS0xOTsiMDI6NTY6MDAgIjsyO0xvY2FsX3VzZXI7REVTS1RPUC1TNk9UU1MxOzIwMjEtMTEtMTk7IjEyOjAzOjE2ICI7YWpvdXRlciBpbnQuZnByZzs4NDYx"/>
+        <attribute name="edited" value="TG9jYWxfdXNlcjtERVNLVE9QLVM2T1RTUzE7MjAyMS0xMS0xOTsiMDM6NDY6NDMgIjsxMTszNDgw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="size, i, j, tmp, newValue, position" type="Integer" array="False" size=""/>
+            <assign variable="size" expression="7"/>
+            <declare name="isDeleted, isExist" type="Boolean" array="False" size=""/>
+            <assign variable="isDeleted" expression="false"/>
+            <assign variable="isExist" expression="false"/>
+            <declare name="arr" type="Integer" array="True" size="size"/>
+            <declare name="newArr" type="Integer" array="True" size="size-1"/>
+            <assign variable="position" expression="size"/>
+            <for variable="i" start="0" end="size-1" direction="inc" step="1">
+                <assign variable="arr[i]" expression="random(101)"/>
+            </for>
+            <while expression="!isExist">
+                <output expression="&quot;quelles valeurs voulez vous supp? &quot;" newline="True"/>
+                <input variable="newValue"/>
+                <for variable="i" start="0" end="size-1" direction="inc" step="1">
+                    <if expression="newValue == arr[i]">
+                        <then>
+                            <assign variable="position" expression="i"/>
+                            <assign variable="isExist" expression="true"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="!isExist">
+                    <then>
+                        <output expression="&quot;le nombre que vous essay&#233; d'entrer n'est pas dans le tableau &quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+            <for variable="i" start="0" end="size-2" direction="inc" step="1">
+                <if expression="i&lt; position">
+                    <then>
+                        <assign variable="newArr[i]" expression="arr[i]"/>
+                    </then>
+                    <else>
+                        <if expression="!isDeleted">
+                            <then>
+                                <assign variable="isDeleted" expression="true"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <assign variable="newArr[i]" expression="arr[i+1]"/>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

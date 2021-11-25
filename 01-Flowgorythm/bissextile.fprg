@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="local_user"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-16 10:32:20 "/>
+        <attribute name="created" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0xNjsiMDg6Mzc6MjIgIjszMzE4"/>
+        <attribute name="edited" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0xNjsiMTA6MzI6MjAgIjsyOzM0MTM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="year" type="Integer" array="False" size=""/>
+            <input variable="year"/>
+            <if expression="((year % 4) = 0 &amp;&amp; (year % 100) != 0) || (year % 400) = 0">
+                <then>
+                    <output expression="year &amp; &quot; est une ann&#233;e bissextile !&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="year &amp; &quot; n'est pas bissextile !&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

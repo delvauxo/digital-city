@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="local_user"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-18 02:53:30 "/>
+        <attribute name="created" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0xODsiMDI6MjA6MzUgIjszMzEw"/>
+        <attribute name="edited" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0xODsiMDI6NTM6MzAgIjsxOzM0MTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="amount, rating, i" type="Integer" array="False" size=""/>
+            <declare name="average" type="Real" array="False" size=""/>
+            <assign variable="average" expression="0"/>
+            <do expression="amount&gt;10||amount&lt;1">
+                <output expression="&quot;Entrer le nombre de joueurs (max 10)&quot;" newline="True"/>
+                <input variable="amount"/>
+            </do>
+            <declare name="players" type="Integer" array="True" size="amount"/>
+            <for variable="i" start="0" end="amount-1" direction="inc" step="1">
+                <output expression="&quot;Entrer la note du joueur &quot; &amp; i+1" newline="True"/>
+                <input variable="rating"/>
+                <assign variable="players[i]" expression="rating"/>
+                <assign variable="average" expression="average + players[i]"/>
+            </for>
+            <output expression="(average)/amount" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,20 @@
+(3j 1h 19m 05s)
+(1j 5h 35m 20s)
+
+duree1Secs = duree1S + (duree1M * 60) + ((duree1H * 3600)) + (duree1J*86400)
+duree2Secs = duree2S + (duree2M * 60) + ((duree2H * 3600)) + (duree2J*86400)
+
+dureeDiff = duree1Secs - duree2Secs
+
+-----------
+variables duree1J: int, duree1H: int, duree1M: int, duree1S: int, duree2J: int, duree2H: int, duree2M: int, duree2S: int, duree1Secs: int, duree2Secs: int, dureeDiff: int
+
+Debut
+    Si condition Alors
+        instructions1
+    SinonSi condition Alors
+        instructions2
+    Sinon
+        instructions3
+    FinSi
+Fin

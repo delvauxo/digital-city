@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="local_user"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-22 09:22:30 "/>
+        <attribute name="created" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0yMjsiMDk6MTA6MjggIjszMzEz"/>
+        <attribute name="edited" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0yMjsiMDk6MjI6MzAgIjszOzM0MTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nbr" type="Integer" array="False" size=""/>
+            <declare name="result" type="Real" array="False" size=""/>
+            <assign variable="nbr" expression="5"/>
+            <assign variable="result" expression="square(nbr)"/>
+            <output expression="result" newline="True"/>
+        </body>
+    </function>
+    <function name="square" type="Real" variable="res">
+        <parameters>
+            <parameter name="nbr" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="res" type="Real" array="False" size=""/>
+            <assign variable="res" expression="nbr*nbr"/>
+        </body>
+    </function>
+</flowgorithm>

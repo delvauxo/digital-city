@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="local_user"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-19 11:55:32 "/>
+        <attribute name="created" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0xOTsiMDk6NDU6NTAgIjszMzIy"/>
+        <attribute name="edited" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0xOTsiMTE6NTU6MzIgIjszOzM0MjY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="size, i, j, search, position" type="Integer" array="False" size=""/>
+            <declare name="choice" type="String" array="False" size=""/>
+            <declare name="quit" type="Boolean" array="False" size=""/>
+            <assign variable="quit" expression="false"/>
+            <assign variable="size" expression="10"/>
+            <declare name="T" type="Integer" array="True" size="size"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <assign variable="T[i]" expression="0"/>
+            </for>
+            <assign variable="T[0]" expression="1"/>
+            <while expression="!quit">
+                <for variable="i" start="0" end="size-1" direction="inc" step="1">
+                    <if expression="T[i]==1">
+                        <then>
+                            <assign variable="position" expression="i"/>
+                            <output expression="&quot; X |&quot;" newline="False"/>
+                        </then>
+                        <else>
+                            <output expression="&quot; _ |&quot;" newline="False"/>
+                        </else>
+                    </if>
+                </for>
+                <output expression="&quot; &quot;" newline="True"/>
+                <output expression="&quot;Aller &#224; gauche (g), droite (d) ou stopper l'algo (q) ?&quot;" newline="True"/>
+                <input variable="choice"/>
+                <output expression="choice" newline="True"/>
+                <if expression="choice==&quot;g&quot;">
+                    <then>
+                        <assign variable="T[position]" expression="0"/>
+                        <if expression="position==0">
+                            <then>
+                                <assign variable="position" expression="size-1"/>
+                                <assign variable="T[position]" expression="1"/>
+                            </then>
+                            <else>
+                                <assign variable="T[position-1]" expression="1"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <if expression="choice==&quot;d&quot;">
+                            <then>
+                                <assign variable="T[position]" expression="0"/>
+                                <if expression="position==size-1">
+                                    <then>
+                                        <assign variable="position" expression="0"/>
+                                        <assign variable="T[position]" expression="1"/>
+                                    </then>
+                                    <else>
+                                        <assign variable="T[position+1]" expression="1"/>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <if expression="choice==&quot;q&quot;">
+                                    <then>
+                                        <assign variable="quit" expression="true"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;Aurevoir&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

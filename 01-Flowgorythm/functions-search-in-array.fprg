@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="local_user"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-22 09:41:54 "/>
+        <attribute name="created" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0yMjsiMDk6MjI6NDAgIjszMzEw"/>
+        <attribute name="edited" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0yMjsiMDk6NDE6NTQgIjsxOzM0MjQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, size, toSearch, indexPosition" type="Integer" array="False" size=""/>
+            <assign variable="size" expression="10"/>
+            <assign variable="toSearch" expression="37"/>
+            <declare name="T" type="Integer" array="True" size="size"/>
+            <for variable="i" start="0" end="size-1" direction="inc" step="1">
+                <assign variable="T[i]" expression="random(101)"/>
+            </for>
+            <assign variable="indexPosition" expression="searchInArray(T, size, toSearch)"/>
+            <output expression="indexPosition" newline="True"/>
+        </body>
+    </function>
+    <function name="searchInArray" type="Integer" variable="index">
+        <parameters>
+            <parameter name="tab" type="Integer" array="True"/>
+            <parameter name="size" type="Integer" array="False"/>
+            <parameter name="toSearch" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="index, i, arraySize, position" type="Integer" array="False" size=""/>
+            <declare name="found" type="Boolean" array="False" size=""/>
+            <assign variable="found" expression="false"/>
+            <assign variable="arraySize" expression="size"/>
+            <for variable="i" start="0" end="arraySize-1" direction="inc" step="1">
+                <if expression="tab[i]==toSearch">
+                    <then>
+                        <assign variable="found" expression="true"/>
+                        <assign variable="position" expression="i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="found">
+                <then>
+                    <assign variable="index" expression="position"/>
+                </then>
+                <else>
+                    <assign variable="index" expression="-1"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

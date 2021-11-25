@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="local_user"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-18 03:50:03 "/>
+        <attribute name="created" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0xODsiMDI6NTM6MzMgIjszMzE0"/>
+        <attribute name="edited" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0xODsiMDM6NTA6MDMgIjsxOzM0MTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="size, i, tmp" type="Integer" array="False" size=""/>
+            <assign variable="size" expression="10"/>
+            <declare name="T" type="Integer" array="True" size="size"/>
+            <for variable="i" start="0" end="size-1" direction="inc" step="1">
+                <output expression="&quot;Entrer le nombre n&#176;&quot; &amp; i+1" newline="True"/>
+                <input variable="T[i]"/>
+            </for>
+            <for variable="i" start="0" end="size-1" direction="inc" step="1">
+                <if expression="i&lt;=(size-1)/2">
+                    <then>
+                        <assign variable="tmp" expression="T[i]"/>
+                        <assign variable="T[i]" expression="T[(size-1)-i]"/>
+                        <assign variable="T[(size-1)-i]" expression="tmp"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

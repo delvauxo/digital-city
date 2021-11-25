@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="local_user"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-22 10:36:39 "/>
+        <attribute name="created" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0yMjsiMDk6NDI6MDggIjszMzE2"/>
+        <attribute name="edited" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0yMjsiMTA6MzY6MzkgIjsxOzM0MjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="size1, size2, i, j" type="Integer" array="False" size=""/>
+            <assign variable="size1" expression="10"/>
+            <assign variable="size2" expression="5"/>
+            <declare name="array1" type="Integer" array="True" size="size1"/>
+            <declare name="array2" type="Integer" array="True" size="size2"/>
+            <declare name="newArray" type="Integer" array="True" size="size1+size2"/>
+            <for variable="i" start="0" end="size1-1" direction="inc" step="1">
+                <assign variable="array1[i]" expression="random(101)"/>
+            </for>
+            <for variable="j" start="0" end="size2-1" direction="inc" step="1">
+                <assign variable="array2[j]" expression="random(101)"/>
+            </for>
+            <call expression="arrayFusion(array1, array2, size1, size2, newArray)"/>
+        </body>
+    </function>
+    <function name="arrayFusion" type="None" variable="">
+        <parameters>
+            <parameter name="T1" type="Integer" array="True"/>
+            <parameter name="T2" type="Integer" array="True"/>
+            <parameter name="sizeT1" type="Integer" array="False"/>
+            <parameter name="sizeT2" type="Integer" array="False"/>
+            <parameter name="T3" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="i, j" type="Integer" array="False" size=""/>
+            <assign variable="j" expression="0"/>
+            <for variable="i" start="0" end="sizeT1-1" direction="inc" step="1">
+                <assign variable="T3[j]" expression="T1[i]"/>
+                <assign variable="j" expression="j+1"/>
+            </for>
+            <for variable="i" start="0" end="sizeT2-1" direction="inc" step="1">
+                <assign variable="T3[j]" expression="T2[i]"/>
+                <assign variable="j" expression="j+1"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

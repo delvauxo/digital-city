@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="local_user"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-18 11:55:13 "/>
+        <attribute name="created" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0xODsiMTE6MzI6NDMgIjszMzEy"/>
+        <attribute name="edited" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0xODsiMTE6NTU6MTMgIjszOzM0MjQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, x, count, result" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="1"/>
+            <output expression="&quot;Entrer un nombre&quot;" newline="True"/>
+            <input variable="n"/>
+            <output expression="&quot;Entrer l'exposant&quot;" newline="True"/>
+            <input variable="x"/>
+            <if expression="x==0">
+                <then>
+                    <assign variable="result" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="result" expression="n"/>
+                    <do expression="count&lt;x">
+                        <assign variable="result" expression="result*n"/>
+                        <assign variable="count" expression="count+1"/>
+                    </do>
+                </else>
+            </if>
+            <output expression="result" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

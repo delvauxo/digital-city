@@ -1,0 +1,8 @@
+variable year : 1987
+Debut
+    Si (year est divisible par 4 && year pas divisible par 100) || (year divisible par 400) ALORS
+        Ecrire("year est bissextile")
+    Sinon 
+        Ecrire ("year n'est pas bissextile")
+    FinSi
+Fin

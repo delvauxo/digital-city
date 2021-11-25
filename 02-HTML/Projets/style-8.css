@@ -1,0 +1,53 @@
+#tab1 {
+    background-color: #000;
+    border: 25px solid #000;
+    color: #fff;
+    width: 275px;
+}
+
+#tab1 table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#tab1 th {
+    height: 40px;
+    vertical-align: top;
+    font-size: 20px;
+}
+
+#tab1 tr:nth-of-type(2) td {
+    height: 50px;
+}
+
+#tab1 tr:nth-of-type(2) td:first-of-type {
+    vertical-align: top; 
+    text-align: center;
+}
+#tab1 tr:nth-of-type(2) td {
+    text-align: center;
+    vertical-align: middle;
+}
+#tab1 tr:nth-of-type(2) td:last-of-type {
+    vertical-align: bottom;
+}
+
+#tab1 tr:nth-of-type(3) td,
+#tab1 tr:nth-of-type(4) td {
+    height: 35px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#tab1 tr:nth-of-type(3) td:last-of-type {
+    background-color: yellow;
+}
+
+#tab1 tr:nth-of-type(4) td {
+    background-color: blue;
+}
+
+#tab1 td {
+    background-color: #ff0000;
+    border: 20px solid #ff0000;
+}

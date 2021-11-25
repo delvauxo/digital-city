@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="local_user"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-18 12:40:59 "/>
+        <attribute name="created" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0xODsiMTI6MjI6MDggIjszMzEz"/>
+        <attribute name="edited" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0xODsiMTI6NDA6NTkgIjsxOzM0Mjc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="size, n, count, result" type="Integer" array="False" size=""/>
+            <assign variable="size" expression="10"/>
+            <declare name="numbers" type="Integer" array="True" size="size"/>
+            <assign variable="count" expression="0"/>
+            <while expression="count&lt;size">
+                <output expression="&quot;Entrer un nombre&quot;" newline="True"/>
+                <input variable="n"/>
+                <assign variable="result" expression="n"/>
+                <while expression="count&lt;10">
+                    <assign variable="numbers[count]" expression="result"/>
+                    <assign variable="result" expression="result*n"/>
+                    <assign variable="count" expression="count+1"/>
+                </while>
+                <assign variable="count" expression="count+1"/>
+            </while>
+            <assign variable="count" expression="0"/>
+            <while expression="count&lt;size">
+                <output expression="numbers[count]" newline="True"/>
+                <assign variable="count" expression="count+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

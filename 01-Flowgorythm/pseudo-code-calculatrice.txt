@@ -1,0 +1,13 @@
+variables A : int, B : int, operator : string, result : int
+
+Debut
+    Lire A
+    Lire operator
+    Lire B
+    SelonQue operator vaut
+        + : Ecrire (A + B)
+        - : Ecrire (A - B)
+        * : Ecrire (A * B)
+        / : Ecrire (A / B)
+    FinSQ
+Fin

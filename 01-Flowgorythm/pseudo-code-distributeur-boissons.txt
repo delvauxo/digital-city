@@ -1,0 +1,10 @@
+variables stock : boolean, numero : int
+
+Debut
+    Lire numero
+    Si numero.stock = true Alors
+        Ecrire distribuer
+    Sinon
+        Ecrire ("Plus disponible.")
+    FinSi
+Fin

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="local_user"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-18 12:22:02 "/>
+        <attribute name="created" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0xODsiMTI6MTU6MjYgIjszMzE1"/>
+        <attribute name="edited" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0xODsiMTI6MjI6MDIgIjsxOzM0MTU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="size, n, count" type="Integer" array="False" size=""/>
+            <assign variable="size" expression="6"/>
+            <declare name="numbers" type="Integer" array="True" size="size"/>
+            <assign variable="count" expression="0"/>
+            <while expression="count&lt;size">
+                <output expression="&quot;Entrer un nombre entier&quot;" newline="True"/>
+                <input variable="n"/>
+                <assign variable="numbers[count]" expression="n"/>
+                <assign variable="count" expression="count+1"/>
+            </while>
+            <assign variable="count" expression="0"/>
+            <while expression="count&lt;size">
+                <output expression="numbers[count]" newline="True"/>
+                <assign variable="count" expression="count+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="local_user"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-16 02:08:41 "/>
+        <attribute name="created" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0xNjsiMTE6Mzg6NDkgIjszMzIy"/>
+        <attribute name="edited" value="bG9jYWxfdXNlcjtERVNLVE9QLTUzVVYxR1Q7MjAyMS0xMS0xNjsiMDI6MDg6NDEgIjsxOzM0MTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="duree1J, duree1H, duree1M, duree1S, duree2J, duree2H, duree2M, duree2S" type="Integer" array="False" size=""/>
+            <input variable="duree1J"/>
+            <input variable="duree1H"/>
+            <input variable="duree1M"/>
+            <input variable="duree1S"/>
+            <input variable="duree2J"/>
+            <input variable="duree2H"/>
+            <input variable="duree2M"/>
+            <input variable="duree2S"/>
+            <declare name="duree1Secs, duree2Secs" type="Integer" array="False" size=""/>
+            <assign variable="duree1Secs" expression="convertisseur(duree1J, duree1H, duree1M, duree1S)"/>
+            <assign variable="duree2Secs" expression="convertisseur(duree2J, duree2H, duree2M, duree2S)"/>
+            <output expression="duree1Secs" newline="True"/>
+            <output expression="duree2Secs" newline="True"/>
+            <declare name="res" type="Integer" array="False" size=""/>
+            <assign variable="res" expression="difference(duree1Secs, duree2Secs)"/>
+            <output expression="res" newline="True"/>
+        </body>
+    </function>
+    <function name="convertisseur" type="Integer" variable="resultat">
+        <parameters>
+            <parameter name="jours" type="Integer" array="False"/>
+            <parameter name="heures" type="Integer" array="False"/>
+            <parameter name="minutes" type="Integer" array="False"/>
+            <parameter name="secondes" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="resultat" type="Integer" array="False" size=""/>
+            <assign variable="resultat" expression="secondes + (minutes*60) + (heures*3600) + (jours*86400)"/>
+        </body>
+    </function>
+    <function name="difference" type="Integer" variable="resultat">
+        <parameters>
+            <parameter name="duree1" type="Integer" array="False"/>
+            <parameter name="duree2" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="resultat" type="Integer" array="False" size=""/>
+            <assign variable="resultat" expression="duree1 - duree2"/>
+        </body>
+    </function>
+</flowgorithm>

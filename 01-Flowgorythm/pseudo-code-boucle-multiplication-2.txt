@@ -1,0 +1,8 @@
+variable i: int
+Debut
+    i = 0
+    Tant Que i < 10 Faire
+        Ecrire i * 2 
+        i = i + 1
+    FinTQ
+Fin
