@@ -1,8 +1,10 @@
 function main() {
     
+    // Getting current date.
     let date = new Date()
     console.log(date)
 
+    // Getting day of the current date.
     let day = date.getDay()
     console.log(day)
 
