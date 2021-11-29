@@ -1,0 +1,240 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Custom Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    width: 980px;
+}
+
+header .banner {
+    position: relative;
+    background: url('assets/banner.jpg') no-repeat center/cover;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+header .container {
+    position: absolute;
+    bottom: 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px 10px 0 0;
+    background-color: rgba(255, 255, 255, .75);
+}
+
+header nav ul li {
+    width: calc(100%/5);
+}
+
+header nav ul li a {
+    text-align: center;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #000;
+    padding: 12px;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 30px;
+    transition: background-color .25s ease-in-out;
+}
+
+header nav ul li a.nav-active {
+    background-color: #fff;
+}
+
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, .85);
+}
+
+header nav ul li:first-of-type a,
+header nav ul li:first-of-type a:hover {
+    border-radius: 10px 0 0 0;
+}
+
+header nav ul li:last-of-type a,
+header nav ul li:last-of-type a:hover {
+    border-radius: 0 10px 0 0;
+}
+
+/* Main */
+
+main {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+main .title {
+    position: relative;
+}
+
+main .title h1 {
+    background-color: #fff;
+    display: inline-block;
+}
+
+main .title .endline {
+    background-color: #6a040a;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+main h1 {
+    font-size: 24px;
+    margin: 25px 0;
+    padding-right: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+main img.home-img {
+    float: left;
+    height: 400px;
+    padding-right: 50px;
+}
+
+main .page-about .about-img {
+    float: right;
+    padding-left: 50px;
+}
+
+main .page-map .map iframe {
+    width: 100%;
+    padding: 50px 0;
+}
+
+main .page-contact .container-form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+main .page-contact .container-form form > * {
+    display: block;
+    width: 100%;
+}
+
+main .page-contact .container-form form .buttons {
+    text-align: right;
+}
+
+main p {
+    line-height: 140%;
+    text-align: justify;
+}
+
+main .products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(12%/3);
+}
+
+main .products h3 {
+    background-color: rgba(0, 0, 0, .1);
+    padding: 10px;
+    text-align: center;
+}
+
+main .products article {
+    width: 22%;
+    margin-bottom: calc(12%/3);
+    border: 1px solid transparent;
+    transition: border .25s ease-in-out;
+}
+
+main .products article:hover {
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.img--container {
+    width: 100%;
+}
+
+.img--container img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer */
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
+
+/* ///////// */

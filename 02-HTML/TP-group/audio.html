@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>audio</title>
+  </head>
+  <body>
+
+    <header>
+      <nav class="d-block">
+        <ul class="nav-item">
+          <li><a href="index.html">Video</a></li>
+          <li><a class="nav-active" href="audio.html">Audio</a></li>
+          <li><a href="zIndex.html">z-index</a></li>
+          <li><a href="media.html">@media</a></li>
+          <li class="dropdown">
+            <a href="withviewport.html">Viewport</a>
+            <a href="withoutviewport.html">Viewport (without)</a>
+            <a href="withviewport500.html">Viewport (500)</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <code>
+      <h1 class="title">&lt;audio&gt;</h1>
+    </code>
+
+    <main>
+
+      <div class="container-item">
+        <div class="subtitle">
+          <h5>Attribut - Controls</h5>
+          <div class="endline"></div>
+        </div>
+        <audio
+        class="audio"
+        width="300"
+        controls
+        src="./assets/starWarsMusic.mp3"
+      ></audio>
+        <div class="code">&lt;audio src="..." controls&gt;</div>
+        <div class="clear"></div>
+      </div>
+
+      <div class="container-item">
+        <div class="subtitle">
+          <h5>Attribut - Autoplay</h5>
+          <div class="endline"></div>
+        </div>
+        <audio
+        class="audio"
+        width="300"
+        controls
+        autoplay
+        src="./assets/starWarsMusic.mp3"
+      ></audio>
+        <div class="code">&lt;audio src="..." controls autoplay&gt;</div>
+        <div class="clear"></div>
+      </div>
+
+      <div class="container-item">
+        <div class="subtitle">
+          <h5>Attribut - Loop</h5>
+          <div class="endline"></div>
+        </div>
+        <audio
+        class="audio"
+        width="300"
+        controls
+        loop
+        src="./assets/starWarsMusic.mp3"
+      ></audio>
+        <div class="code">&lt;audio src="..." controls loop&gt;</div>
+        <div class="clear"></div>
+      </div>
+
+      <div class="container-item">
+        <div class="subtitle">
+          <h5>Attribut - Muted</h5>
+          <div class="endline"></div>
+        </div>
+        <audio
+        class="audio"
+        width="300"
+        controls
+        muted
+        src="./assets/starWarsMusic.mp3"
+      ></audio>
+        <div class="code">&lt;audio src="..." controls muted&gt;</div>
+        <div class="clear"></div>
+      </div>
+
+    </main>
+
+  </body>
+</html>

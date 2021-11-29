@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <header>
+      <nav class="d-block">
+        <ul class="nav-item">
+          <li><a href="index.html">Video</a></li>
+          <li><a href="audio.html">Audio</a></li>
+          <li><a href="zIndex.html">z-index</a></li>
+          <li><a class="nav-active" href="media.html">@media</a></li>
+          <li class="dropdown">
+            <a href="withviewport.html">Viewport</a>
+            <a href="withoutviewport.html">Viewport (without)</a>
+            <a href="withviewport500.html">Viewport (500)</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <code>
+      <h1 class="title">@media</h1>
+    </code>
+
+    <main>
+
+      <div class="container-item">
+        <div class="subtitle">
+          <h5>@media - screen</h5>
+          <div class="endline"></div>
+        </div>
+      </div>
+
+      <div id="media-code-hidden">@media screen and (min-width: ...px) and (max-width: ...px)</div>
+      <div id="media-code">Trouve le secret de la page en jouant avec celle-ci.</div>
+
+      <div style="position: relative">
+        <div id="main">
+          <div id="back">
+            <!-- <video src="https://www.youtube.com/embed/cAol18VefIE"></video> -->
+            <object
+              data="https://www.youtube.com/embed/cAol18VefIE"
+              width="920"
+              height="690"
+            ></object>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+  </body>
+</html>

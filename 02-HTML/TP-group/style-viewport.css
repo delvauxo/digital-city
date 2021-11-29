@@ -1,0 +1,51 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+}
+td {
+  /* border: solid black 2px; */
+  width: 70px;
+}
+
+td > a {
+  text-decoration: none;
+  color: black;
+}
+td > a:hover {
+  color: gray;
+}
+
+.img-container {
+  position: relative;
+}
+
+#yoda-desc {
+  text-align: justify;
+}
+
+#img-overlay {
+  background-color: rgb(255, 255, 255, 0.5);
+  padding: 15px;
+  margin-bottom: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#measure-top {
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 2px solid black;
+}
+
+#measure-bottom {
+  text-align: center;
+  font-weight: bold;
+  border-top: 2px solid black;
+}

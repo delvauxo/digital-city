@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style-viewport.css" />
+    <title>JS Laboratory</title>
+  </head>
+  <body onResize="refresh()">
+
+    <header>
+      <nav class="d-block">
+        <ul class="nav-item">
+          <li><a href="index.html">Video</a></li>
+          <li><a href="audio.html">Audio</a></li>
+          <li><a href="zIndex.html">z-index</a></li>
+          <li><a href="media.html">@media</a></li>
+          <li class="dropdown">
+            <a class="nav-active" href="withviewport.html">Viewport (with)</a>
+            <a href="withoutviewport.html">Viewport (without)</a>
+            <a href="withviewport500.html">Viewport (500)</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <code>
+      <h1 class="title">&lt;meta name="viewport"&gt;</h1>
+    </code>
+
+    <main style="width: auto;">
+
+      <div class="container-item">
+        <div class="subtitle">
+          <h5>Attribut - content - width=device-width</h5>
+          <div class="endline"></div>
+        </div>
+        <div class="code-viewport">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</div>
+        <div class="clear"></div>
+      </div>
+
+    </main>
+
+    <section>
+      <h1>Page responsive.</h1>
+      <h3>content="width=device-width, initial-scale=1"</h3>
+      <div class="img-container">
+        <img src="./assets/yoda.jpeg" id="yoda-img" alt="Yoda" />
+        <div id="img-overlay">width : 256px</div>
+      </div>
+      <div id="measure-top"></div>
+      <p id="yoda-desc">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+        volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+        ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+        molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero
+        eros et accumsan et iusto odio dignissim qui blandit praesent luptatum
+        zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber
+        tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
+        quod mazim placerat facer possim assum. Nam liber tempor cum soluta
+        nobis eleifend option congue nihil imperdiet doming id quod mazim
+        placerat facer possim assum.
+      </p>
+      <div id="measure-bottom"></div>
+    </section>
+    <script src="main-viewport.js"></script>
+  </body>
+</html>
