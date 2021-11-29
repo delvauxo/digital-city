@@ -15,7 +15,7 @@ function main() {
     }
 
     let price = PriceVATIncl(priceUnitVATExcl, unitQty)
-    console.log(price)
+    alert("Le prix total s'élève à " + price + " TVA incluse (21%)")
 
 }
 
