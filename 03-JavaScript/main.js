@@ -1,16 +1,28 @@
-function reverseName() {
+function reversedName() {
+
     function getName() {
         let yourName = document.getElementById('yourName').value
         console.log(yourName)
         return yourName
     }
+
+    function reverseName() {
+        if (name) {
+            let reversedName = name.split('').reverse().join('')
+            console.log(reversedName)
+            return reversedName
+        }
+    }
+
     let name = getName()
-    if (name) {
-        let reversedName = name.split('').reverse('').join('')
-        console.log(reversedName)
+    let reversedName = reverseName()
+
+    function displayNames() {
+        let elOriginal = document.getElementById('name-original')
+        let elReversed = document.getElementById('name-reversed')
+        elOriginal.innerHTML = name
+        elReversed.innerHTML = reversedName
     }
-    function displayName() {
-        let el = document.getElementById('name-reversed')
-        el.innerHTML = name
-    }
+    
+    displayNames()
 }
