@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>JavaScript TP-08 - DOM - Add article to cart and display total</title>
+</head>
+<body>
+    <section>
+        <h1>Descriptif du produit</h1>
+        <table>
+            <tr>
+                <td class="label">Chaise</td>
+                <td class="price">25</td>
+                <td><button onclick="addToCart(this)">Ajouter au panier</button></td>
+            </tr>
+            <tr>
+                <td class="label">Table</td>
+                <td class="price">150</td>
+                <td><button onclick="addToCart(this)">Ajouter au panier</button></td>
+            </tr>
+            <tr>
+                <td class="label">Meuble TV</td>
+                <td class="price">250</td>
+                <td><button onclick="addToCart(this)">Ajouter au panier</button></td>
+            </tr>
+        </table>
+        <hr>
+        <h1>Mon panier</h1>
+        <table id="cart">
+        </table>
+        <form>
+            <label for="total">Prix Total :</label>
+            <input type="text" id="total" value="0">
+        </form>
+    </section>
+</body>
+</html>
