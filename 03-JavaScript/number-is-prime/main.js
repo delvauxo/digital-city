@@ -5,8 +5,8 @@ function isPrime(nbr) {
     for (let i = 2; i < nbr; i++) {
         if (nbr % i == 0) {
             isPrime = false
-            console.log(nbr + ' est divisible par ' + i);
             console.log(nbr + " n'est pas premier !")
+            console.log(nbr + ' est divisible par ' + i);
             break
         }
     }
