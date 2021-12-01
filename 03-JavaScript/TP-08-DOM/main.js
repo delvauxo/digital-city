@@ -1,11 +1,9 @@
-let total = 0
-
-let btnEvent = document.querySelectorAll('[data-event]')
-console.log(btnEvent)
-
+let btnEvent = document.querySelectorAll('[data-event="onClick"]')
 for (let i = 0; i < btnEvent.length; i++) {
     btnEvent[i].addEventListener('click', addToCart)
 }
+
+let total = 0
 
 function addToCart(e) {
 
