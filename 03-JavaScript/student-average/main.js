@@ -1,4 +1,4 @@
-let students = [
+let classA = [
     {
         name: 'Marc',
         average: 15
@@ -17,12 +17,17 @@ let students = [
     }
 ]
 
-function displayWhoHasAverage() {
+var hasAverage = function (students) {
+    let averages= []
     for (let i = 0; i < students.length; i++) {
-        if (students[i].average >= 10) {
-            console.log(students[i].name + " a la moyenne. - " + students[i].average + '/20')
+        const student = students[i]
+        if (student.average >= 10) {
+            averages.push(student)
         }
     }
+    return averages
 }
 
-displayWhoHasAverage()
+console.log(hasAverage(classA))
+
+
