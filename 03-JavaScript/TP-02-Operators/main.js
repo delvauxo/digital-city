@@ -9,13 +9,13 @@ function main() {
     function PriceVATIncl(price, qty) {
         const VAT = 21
         let priceExclVAT = price * qty
-        let VATpart = (priceExclVAT * 21) / 100
+        let VATpart = (priceExclVAT * VAT) / 100
         let res = VATpart + priceExclVAT
         return res
     }
 
     let price = PriceVATIncl(priceUnitVATExcl, unitQty)
-    alert("Le prix total s'élève à " + price + " TVA incluse (21%)")
+    alert("Le prix total s'élève à " + price + " TVA incluse (" + VAT + "%)")
 
 }
 
