@@ -1,13 +1,14 @@
 function main() {
 
-    let priceUnitVATExcl = window.prompt("Entrez le prix unitaire (hors taxe) du livre")
+    let priceUnitVATExcl = window.prompt("Entrez le prix unitaire (hors taxe) du livre", 1)
     console.log(priceUnitVATExcl)
 
-    let unitQty = window.prompt("Entrez le nombre d'exemplaires souhaité")
+    let unitQty = window.prompt("Entrez le nombre d'exemplaires souhaité", 1)
     console.log(unitQty)
 
+    const VAT = 21
+
     function PriceVATIncl(price, qty) {
-        const VAT = 21
         let priceExclVAT = price * qty
         let VATpart = (priceExclVAT * VAT) / 100
         let res = VATpart + priceExclVAT
