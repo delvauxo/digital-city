@@ -17,10 +17,12 @@ let students = [
     }
 ]
 
-for (let i = 0; i < students.length; i++) {
-    if (students[i].average < 10) {
-        console.log(students[i].name + " n'a pas la moyenne. - " + students[i].average + '/20')
-    } else {
-        console.log(students[i].name + " a la moyenne. - " + students[i].average + '/20')
+function displayWhoHasAverage() {
+    for (let i = 0; i < students.length; i++) {
+        if (students[i].average >= 10) {
+            console.log(students[i].name + " a la moyenne. - " + students[i].average + '/20')
+        }
     }
 }
+
+displayWhoHasAverage()

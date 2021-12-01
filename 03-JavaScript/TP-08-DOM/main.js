@@ -1,9 +1,17 @@
 let total = 0
 
+let btnEvent = document.querySelectorAll('[data-event]')
+console.log(btnEvent)
+
+for (let i = 0; i < btnEvent.length; i++) {
+    btnEvent[i].addEventListener('click', addToCart)
+}
+
 function addToCart(e) {
 
-    let itemLabel = e.parentNode.parentNode.childNodes[1].innerText
-    let itemPrice = parseInt(e.parentNode.parentNode.childNodes[3].innerText)
+    let target = e.target
+    let itemLabel = target.parentNode.parentNode.childNodes[1].innerText
+    let itemPrice = parseInt(target.parentNode.parentNode.childNodes[3].innerText)
     
     let tr = document.createElement('tr')
     let td1 = document.createElement('td')
