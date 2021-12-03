@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>MasterMind</title>
+<meta charset="UTF-8" />
+<script src="MasterMind.js"></script>
+<script>
+    /* on load scripts */
+    window.onload = function() {
+        MasterMind.initialise();
+    }
+</script>
+<link href="MasterMind.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <div class="page">
+        <h1>
+            MasterMind
+        </h1>
+        <div>
+          &nbsp;
+        </div>
+        <div class="game">
+            <table>
+                <tbody id="plateau">
+
+                </tbody>
+            </table>
+            <p>
+              &nbsp;
+            </p>
+            <table>
+                <tbody id="colorSelector">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="options">
+
+            <div id="result" class="result">
+
+            </div>
+
+            <div class="menus">
+                <div class="menu" onclick="MasterMind.startGame('easy');">
+                    Jouer "Facile"
+                </div>
+                <div class="menu" onclick="MasterMind.startGame('normal');">
+                    Jouer "Normal"
+                </div>
+                <div class="menu" onclick="MasterMind.startGame('hard');">
+                    Jouer "Difficile"
+                </div>
+                <div class="menu" onclick="MasterMind.startGame('extreme');">
+                    Jouer "Extr&ecirc;me"
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
