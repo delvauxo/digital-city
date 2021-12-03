@@ -56,7 +56,7 @@ function main() {
         cellule.style.backgroundColor = `rgb(0, 0, ${blue}, ${opacity})`
         blue += blueCellules.length
         opacity += 1/blueCellules.length
-        cellule.addEventListener('mouseover', e => {
+        cellule.addEventListener('mouseenter', e => {
             target = e.target
             console.log(target);
             let test = document.querySelectorAll('#colorpick table td')
@@ -66,14 +66,17 @@ function main() {
                 console.log(el);
                 let currentColor = el.attributes[0].nodeValue
                 console.log(currentColor)
-                // currentColor = currentColor.replace('background-color: ', '')
-                // currentColor = currentColor.replace(", 0)", `, ${i*calc})`)
-                // currentColor = currentColor.replace(';', '')
+                currentColor = currentColor.replace('background-color: ', '')
+                currentColor = currentColor.replace(", 0)", `, ${i*calc})`)
+                currentColor = currentColor.replace(';', '')
                 console.log(currentColor)
                 el.style.background = currentColor
                 
                 
             }
+        })
+        cellule.addEventListener('mouseleave', e => {
+            location.reload()
         })
     }
 
