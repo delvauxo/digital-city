@@ -1,87 +1,100 @@
 function main() {
-
+    
+    // Get HTML elements.
     let colorpick = document.getElementById('colorpick')
     let bluepick = document.getElementById('bluepick')
+    // Set numbers of rows and cols.
     let rows = 16
     let cols = 16
 
+    // Function to create a table into HTML.
+    // @rows - number of rows.
+    // @cols - number of cols.
+    // @element - HTML element.
     let createTable = function (rows, cols, element) {
+        // Create table HTML element.
         let table = document.createElement('table')
         element.appendChild(table)
         for (let i = 0; i < rows; i++) {
-            let tr = document.createElement('tr')
+        // Create row HTML element.
+        let tr = document.createElement('tr')
             table.appendChild(tr)
             for (let j = 0; j < cols; j++) {
+                // Create col HTML element.
                 let td = document.createElement('td')
                 tr.appendChild(td)
             }
         }
     }
 
-    // Create colors table.
+    // Create COLORS table.
     createTable(rows, cols, colorpick)
 
-    // Red and green.
+    // Get rows and ceils.
     let colorLignes = document.querySelectorAll('#colorpick table tr')
-    console.log(colorLignes)
+    let colorCellules = document.querySelectorAll('#colorpick table td')
+    // Initialise red and green colors.
     let red = 0
+    let green = 0
+    // console.log(colorLignes)
 
     for (let i = 0; i < colorLignes.length; i++) {
-        let ligne = colorLignes[i];
+        let ligne = colorLignes[i]
+        // Get ceils of current row.
         let cellules = ligne.childNodes
-
-        let green = 0
-        red += (255 / (rows))
-        console.log(cellules)
+        // console.log(cellules)
+        // Reset green color for next row.
+        green = 0
+        // Change red color for next ceils at next row.
+        red += (255 / rows)
 
         for (let j = 0; j < cellules.length; j++) {
-            let cellule = cellules[j];
+            let cellule = cellules[j]
+            // Set red and green background color to ceil.
             cellule.style.backgroundColor = `rgb(${red}, ${green}, 0)`
+            // Change green color for next ceil.
             green += (255 / cols)
+            // Set red and green colors value as attribute.
+            cellule.setAttribute('data-red', red)
+            cellule.setAttribute('data-green', green)
         }
     }
 
-    // Create blue table picker.
-    createTable(1, 16, bluepick)
+    // Create BLUE table picker.
+    createTable(1, colorLignes.length, bluepick)
 
-    // blue.
+    // Get ceils of BLUE table picker.
     let blueCellules = document.querySelectorAll('#bluepick table tr td')
-    console.log(blueCellules);
+    // console.log(blueCellules)
+    // Initialise blue color and opacity.
     let blue = 0
     let opacity = 0
 
     for (let i = 0; i < blueCellules.length; i++) {
-        let calc = 255/blueCellules.length;
-        const cellule = blueCellules[i];
+        const cellule = blueCellules[i]
+        // Set blue background color to ceil.
         cellule.style.backgroundColor = `rgb(0, 0, ${blue}, ${opacity})`
-        blue += blueCellules.length
-        opacity += 1/blueCellules.length
-        cellule.addEventListener('mouseenter', e => {
+        // Set blue color value and opacity value as attribute.
+        cellule.setAttribute('data-blue', blue)
+        cellule.setAttribute('data-opacity', opacity)
+        // Change blue color and opacity for next ceil.
+        blue += 255 / blueCellules.length
+        opacity += 1 / blueCellules.length
+        // On mouse over.
+        cellule.addEventListener('mouseover', e => {
             target = e.target
-            console.log(target);
-            let test = document.querySelectorAll('#colorpick table td')
-            console.log(test);
-            for (let z = 0; z < test.length; z++) {
-                const el = test[z]
-                console.log(el);
-                let currentColor = el.attributes[0].nodeValue
-                console.log(currentColor)
-                currentColor = currentColor.replace('background-color: ', '')
-                currentColor = currentColor.replace(", 0)", `, ${i*calc})`)
-                currentColor = currentColor.replace(';', '')
-                console.log(currentColor)
-                el.style.background = currentColor
-                
-                
+            // console.log(target)
+            blue = target.dataset.blue
+            for (let z = 0; z < colorCellules.length; z++) {
+                const elem = colorCellules[z]
+                // Get red and green colors from attributes.
+                let red = elem.dataset.red
+                let green = elem.dataset.green
+                // Set blue background color to ceil.
+                elem.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`
             }
         })
-        cellule.addEventListener('mouseleave', e => {
-            location.reload()
-        })
     }
-
-
 }
-
 
 main()

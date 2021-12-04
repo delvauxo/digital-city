@@ -1,5 +1,12 @@
 #colorpick table td,
 #bluepick table td {
+    border: 1px solid rgba(0, 0, 0, .25);
     width: 16px;
     height: 16px;
+}
+
+#colorpick table td:hover,
+#bluepick table td:hover {
+    border: 1px solid  black;
+    transition: border .25s ease-in-out;
 }
