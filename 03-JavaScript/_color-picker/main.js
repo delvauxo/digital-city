@@ -40,7 +40,7 @@ function main() {
     for (let i = 0; i < colorLignes.length; i++) {
         let ligne = colorLignes[i]
         // Get ceils of current row.
-        let cellules = ligne.childNodes
+        let cellules = ligne.children
         // Reset green color for next row.
         green = 0
         // Change red color for next ceils at next row.
