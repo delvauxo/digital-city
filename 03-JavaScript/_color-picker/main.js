@@ -36,13 +36,11 @@ function main() {
     // Initialise red and green colors.
     let red = 0
     let green = 0
-    // console.log(colorLignes)
 
     for (let i = 0; i < colorLignes.length; i++) {
         let ligne = colorLignes[i]
         // Get ceils of current row.
         let cellules = ligne.childNodes
-        // console.log(cellules)
         // Reset green color for next row.
         green = 0
         // Change red color for next ceils at next row.
@@ -65,7 +63,6 @@ function main() {
 
     // Get ceils of BLUE table picker.
     let blueCellules = document.querySelectorAll('#bluepick table tr td')
-    // console.log(blueCellules)
     // Initialise blue color and opacity.
     let blue = 0
     let opacity = 0
@@ -83,10 +80,10 @@ function main() {
         // On mouse over.
         cellule.addEventListener('mouseover', e => {
             target = e.target
-            // console.log(target)
+            // Get blue color from attribute.
             blue = target.dataset.blue
-            for (let z = 0; z < colorCellules.length; z++) {
-                const elem = colorCellules[z]
+            for (let j = 0; j < colorCellules.length; j++) {
+                const elem = colorCellules[j]
                 // Get red and green colors from attributes.
                 let red = elem.dataset.red
                 let green = elem.dataset.green
