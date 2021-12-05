@@ -14,7 +14,8 @@ body {
 }
 
 #colorpick table td:hover,
-#bluepick table td:hover {
+#bluepick table td:hover,
+#bluepick table td.active {
     border: 1px solid  black;
     transition: border .25s ease-in-out;
 }

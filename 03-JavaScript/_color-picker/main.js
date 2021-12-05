@@ -16,11 +16,11 @@ function main() {
         let table = document.createElement('table')
         element.appendChild(table)
         for (let i = 0; i < rows; i++) {
-        // Create row HTML element.
+        // Create row HTML element(s).
         let tr = document.createElement('tr')
             table.appendChild(tr)
             for (let j = 0; j < cols; j++) {
-                // Create col HTML element.
+                // Create col HTML element(s).
                 let td = document.createElement('td')
                 tr.appendChild(td)
             }
@@ -78,10 +78,9 @@ function main() {
         blue += 255 / blueCellules.length
         opacity += 1 / blueCellules.length
         // On mouse over.
-        cellule.addEventListener('mouseover', e => {
-            target = e.target
+        cellule.addEventListener('mouseover', function () {
             // Get blue color from attribute.
-            blue = target.dataset.blue
+            blue = this.dataset.blue
             for (let j = 0; j < colorCellules.length; j++) {
                 const elem = colorCellules[j]
                 // Get red and green colors from attributes.
