@@ -1,0 +1,40 @@
+/* GENERIC */
+
+html, 
+body {
+    margin: 0;
+}
+
+/* HEADER */
+
+header #banner {
+    background: url('assets/mastermind.png') right top no-repeat;
+    height: 300px;
+    position: relative;
+    border-bottom: 2px solid black;
+}
+
+header #banner:hover::after {
+    background-color: rgba(0, 0, 0, .25);
+}
+
+header #banner::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(221,221,221,1) 0%, rgba(213,213,213,1) 100%);
+}
+
+header #banner::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    transition: background-color .25s ease-in-out;
+}
+
+/* MAIN */
