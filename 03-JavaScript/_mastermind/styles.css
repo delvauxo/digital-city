@@ -1,4 +1,4 @@
-/* GENERIC */
+/* OVERWRITTING */
 
 html, 
 body {
@@ -38,3 +38,63 @@ header #banner::after {
 }
 
 /* MAIN */
+
+main .container {
+    max-width: 980px;
+    background-color: rgba(0, 0, 0, .1);
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+main #game-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main #game-table #colors-to-find {
+    padding: 20px 0;
+}
+
+main #game-table #colors-picker {
+    padding-bottom: 20px;
+}
+
+main #game-table table tr td {
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+
+main #game-table #colors-to-find table tr td:first-of-type,
+main #game-table #colors-to-find table tr td:nth-of-type(n+6),
+main #game-table #colors-picker table tr td:first-of-type,
+main #game-table #colors-picker table tr td:nth-of-type(n+6),
+main #game-table #colors-results table tr td:nth-of-type(6) {
+    visibility: hidden;
+}
+
+main #game-table table tr td:first-of-type {
+    text-align: center;
+}
+
+/* GENERIC */
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
