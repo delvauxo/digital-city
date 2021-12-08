@@ -59,7 +59,7 @@ function main() {
     }
 
     // Create BLUE table picker.
-    createTable(1, colorLignes.length, bluepick)
+    createTable(1, cols, bluepick)
 
     // Get ceils of BLUE table picker.
     let blueCellules = document.querySelectorAll('#bluepick table tr td')
