@@ -4,7 +4,9 @@
     const colorsPicker = document.querySelector('#colors-picker')
     const colorsResults = document.querySelector('#colors-results')
     const colors = ['orangered', 'dodgerblue', 'limegreen', 'gold']
-    
+    const colorsToFindArr = new Array()
+    let colorsToCheck = new Array()
+
     // Function to create tables.
     const createTable = function (rows, cols, element, listNumbers = false) {
         const table = document.createElement('table')
@@ -39,6 +41,8 @@
         cell.style.backgroundColor = colors[randomColorIndex]
         // Set color as attribute.
         cell.setAttribute('data-color', colors[randomColorIndex])
+        // Store in array to compare at check function.
+        colorsToFindArr[i - 1] = colors[randomColorIndex]
     }
 
     // Select colorPicker cells.
@@ -55,17 +59,19 @@
         cell.setAttribute('data-color', colors[i - 1])
         // On colorsPicker cell click.
         cell.addEventListener('click', function () {
-            console.log(this.dataset.color)
-            console.log(colorsResultsRows[countLine])
             if (colorsResultsRows[countLine]) {
                 const cellToColor = colorsResultsRows[countLine].children[countCell + 1]
-                console.log(cellToColor)
                 cellToColor.style.backgroundColor = this.dataset.color
                 cellToColor.setAttribute('data-color', this.dataset.color)
+                colorsToCheck[countCell] = colors[i - 1]
                 countCell++
                 if (countCell === 4) {
+
+                    checkLineBlack()
+
                     countCell = 0
                     countLine++
+
                 }
             // Game is over.
             } else {
@@ -84,7 +90,16 @@
                 }
             }
         })
+
+
     }
+
+
+    let checkLineBlack = function (arr1, arr2) {
+        console.log(colorsToFindArr)
+        console.log(colorsToCheck)
+    }
+
 
 
 })()

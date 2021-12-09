@@ -68,7 +68,6 @@ main #game-table table tr td {
     border-radius: 50%;
 }
 
-
 main #game-table #colors-to-find table tr td:first-of-type,
 main #game-table #colors-to-find table tr td:nth-of-type(n+6),
 main #game-table #colors-picker table tr td:first-of-type,
