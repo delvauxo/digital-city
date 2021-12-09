@@ -6,6 +6,7 @@
     const colors = ['orangered', 'dodgerblue', 'limegreen', 'gold']
     const colorsToFindArr = new Array()
     let colorsToCheck = new Array()
+    let colorsFound = new Array()
 
     // Function to create tables.
     const createTable = function (rows, cols, element, listNumbers = false) {
@@ -48,8 +49,8 @@
     // Select colorPicker cells.
     const colorsPickerCells = document.querySelectorAll('#colors-picker table tr td')
     const colorsResultsRows = document.querySelectorAll('#colors-results table tr')
-    let countLine = 0
-    let countCell = 0
+    let currentLine = 0
+    let currentCell = 0
     // Generate colors to pick.
     for (let i = 1; i < colorsPickerCells.length - (colorsPickerCells.length - colors.length - 1); i++) {
         const cell = colorsPickerCells[i]
@@ -57,20 +58,20 @@
         cell.style.backgroundColor = colors[i - 1]
         // Set color as attribute.
         cell.setAttribute('data-color', colors[i - 1])
-        // On colorsPicker cell click.
+        // On colorsPicker's cell click.
         cell.addEventListener('click', function () {
-            if (colorsResultsRows[countLine]) {
-                const cellToColor = colorsResultsRows[countLine].children[countCell + 1]
+            if (colorsResultsRows[currentLine]) {
+                const cellToColor = colorsResultsRows[currentLine].children[currentCell + 1]
                 cellToColor.style.backgroundColor = this.dataset.color
                 cellToColor.setAttribute('data-color', this.dataset.color)
-                colorsToCheck[countCell] = colors[i - 1]
-                countCell++
-                if (countCell === 4) {
+                colorsToCheck[currentCell] = colors[i - 1]
+                currentCell++
+                if (currentCell === 4) {
 
                     checkLineBlack()
 
-                    countCell = 0
-                    countLine++
+                    currentCell = 0
+                    currentLine++
 
                 }
             // Game is over.
@@ -85,8 +86,8 @@
                         cell.removeAttribute('data-color')
                     }
                     console.log(colorsResultsCells)
-                    countCell = 0
-                    countLine = 0
+                    currentCell = 0
+                    currentLine = 0
                 }
             }
         })
@@ -94,10 +95,29 @@
 
     }
 
-
+    let counts = new Array()
     let checkLineBlack = function (arr1, arr2) {
         console.log(colorsToFindArr)
         console.log(colorsToCheck)
+        for (let i = 0; i < colorsToCheck.length; i++) {
+
+            if (colorsToFindArr[i] == colorsToCheck[i]) {
+                colorsFound[i] = 'rcrp'
+            } else {
+                colorsFound[i] = null
+            }
+
+            
+            
+        }
+        console.log(colorsFound)
+        const black = colorsFound.reduce(function (acc, curr) {
+            console.log('acc', acc)
+            console.log('curr', curr)
+            return acc[curr] ? ++acc[curr] : acc[curr] = 1, acc
+        }, {})
+          
+          console.log(black)
     }
 
 
