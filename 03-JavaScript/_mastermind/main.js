@@ -68,7 +68,12 @@
                 currentCell++
                 if (currentCell === 4) {
 
-                    checkLineBlack()
+                    const black = checkLineBlack()
+                    console.log(black)
+                    setBlack(colorsResultsRows[currentLine], black)
+                    const white = checkLineWhite()
+                    setWhite(colorsResultsRows[currentLine], black, white)
+
 
                     currentCell = 0
                     currentLine++
@@ -95,8 +100,7 @@
 
     }
 
-    let counts = new Array()
-    let checkLineBlack = function (arr1, arr2) {
+    let checkLineBlack = function () {
         console.log(colorsToFindArr)
         console.log(colorsToCheck)
         for (let i = 0; i < colorsToCheck.length; i++) {
@@ -106,18 +110,63 @@
             } else {
                 colorsFound[i] = null
             }
-
-            
-            
         }
         console.log(colorsFound)
-        const black = colorsFound.reduce(function (acc, curr) {
-            console.log('acc', acc)
-            console.log('curr', curr)
-            return acc[curr] ? ++acc[curr] : acc[curr] = 1, acc
-        }, {})
-          
-          console.log(black)
+
+        const black = colorsFound.reduce((acc, value) => value == 'rcrp' ? ++acc : acc, 0);
+
+        return black
+    }
+
+    let setBlack = function (currentRow, blackz) {
+        console.log(currentRow)
+        for (let i = 6; i < currentRow.children.length; i++) {
+            const element = currentRow.children[i]
+
+            if (i < currentRow.children.length - (4 - blackz)) {
+                element.style.backgroundColor = 'black'
+            }
+
+        }
+    }
+
+    function getAllIndexes(arr, val) {
+        let indexes = [], i = -1
+        while ((i = arr.indexOf(val, i+1)) != -1){
+            indexes.push(i)
+        }
+        return indexes
+    }
+
+
+    let checkLineWhite = function () {
+        console.log(colorsToFindArr)
+        console.log(colorsToCheck)
+        console.log(colorsFound)
+        let indexes = getAllIndexes(colorsFound, null)
+        console.log(indexes)
+
+        for (let i = 0; i < colorsToCheck.length; i++) {
+            const el = colorsToCheck[i]
+            const el2 = colorsToFindArr[i]
+            console.log(el)
+            
+            for (let j = 0; j < indexes.length; j++) {
+                const index = indexes[j]
+                console.log("index", indexes)
+                console.log('colorsToCheck[i]',colorsToCheck[i]);
+                if (colorsToCheck[i] == colorsToFindArr[index]) {
+                    // console.log(`el[index] == el2[index] : `, colorsToCheck[index], colorsToFindArr[index])
+                }
+            }
+
+            
+        }
+        
+    }
+
+    let setWhite = function (currentRow, blackz, whitez) {
+        console.log('setwhite function here')
     }
 
 
