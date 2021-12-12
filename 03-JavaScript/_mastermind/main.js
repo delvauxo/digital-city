@@ -151,19 +151,21 @@
         console.log('whiteArrTmp', whiteArrTmp)
         for (const i in indexes) {
             const indexValue = indexes[i]
-            console.log('forIN i --- ', i)
-            console.log('forIN i element --- ', indexValue)
+            // console.log('forIN i --- ', i)
+            // console.log('forIN i element --- ', indexValue)
 
             for (const j in indexes) {
                 const element = indexes[j]
-                console.log('forIN j ', j)
-                console.log('forIN j element', element)
+                // console.log('forIN j ', j)
+                // console.log('forIN j element', element)
         
-                console.log(`whiteArrTmp[indexValue] == colorsToFindArr[element]`, colorsToCheck[indexValue] + ' = ' + whiteArrTmp[element])
+                console.log(colorsToCheck[indexValue] + ' = ' + whiteArrTmp[element])
                 if (colorsToCheck[indexValue] == whiteArrTmp[element]) {
                     whiteArrTmp[element] = null
                     whiteCount++
+                    break
                 }
+                console.log(whiteCount)
                 console.log(whiteArrTmp)
             }
         }
@@ -189,3 +191,8 @@
 
 
 })()
+
+// Check 1er tour la position et la couleur de chaque pion
+// Si trouvé, on remplace par null la couleur dans un tab tmp (black)
+// Check dans ce tab tmp les couleurs restantes aux index qui n'ont pas été remplacés par null
+// Si trouvé on remplace par null la couleur dans un tab tmp (white) et on incrémente le count de white
