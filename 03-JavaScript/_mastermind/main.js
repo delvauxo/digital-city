@@ -113,9 +113,9 @@
         }
         console.log(colorsFound)
 
-        const black = colorsFound.reduce((acc, value) => value == 'rcrp' ? ++acc : acc, 0);
+        const blackCounnt = colorsFound.reduce((acc, value) => value == 'rcrp' ? ++acc : acc, 0);
 
-        return black
+        return blackCounnt
     }
 
     let setBlack = function (currentRow, blackz) {
@@ -140,33 +140,50 @@
 
 
     let checkLineWhite = function () {
-        console.log(colorsToFindArr)
-        console.log(colorsToCheck)
-        console.log(colorsFound)
         let indexes = getAllIndexes(colorsFound, null)
-        console.log(indexes)
-
-        for (let i = 0; i < colorsToCheck.length; i++) {
-            const el = colorsToCheck[i]
-            const el2 = colorsToFindArr[i]
-            console.log(el)
-            
-            for (let j = 0; j < indexes.length; j++) {
-                const index = indexes[j]
-                console.log("index", indexes)
-                console.log('colorsToCheck[i]',colorsToCheck[i]);
-                if (colorsToCheck[i] == colorsToFindArr[index]) {
-                    // console.log(`el[index] == el2[index] : `, colorsToCheck[index], colorsToFindArr[index])
-                }
-            }
-
-            
-        }
+        console.log('indexes', indexes)
         
+        // Count of white ticks.
+        let whiteCount = 0
+        // temp array of white ticks.
+        const whiteArrTmp = [...colorsToFindArr]
+
+        console.log('whiteArrTmp', whiteArrTmp)
+        for (const i in indexes) {
+            const indexValue = indexes[i]
+            console.log('forIN i --- ', i)
+            console.log('forIN i element --- ', indexValue)
+
+            for (const j in indexes) {
+                const element = indexes[j]
+                console.log('forIN j ', j)
+                console.log('forIN j element', element)
+        
+                console.log(`whiteArrTmp[indexValue] == colorsToFindArr[element]`, colorsToCheck[indexValue] + ' = ' + whiteArrTmp[element])
+                if (colorsToCheck[indexValue] == whiteArrTmp[element]) {
+                    whiteArrTmp[element] = null
+                    whiteCount++
+                }
+                console.log(whiteArrTmp)
+            }
+        }
+
+        console.log('whiteCount', whiteCount)
+        return whiteCount
     }
 
     let setWhite = function (currentRow, blackz, whitez) {
-        console.log('setwhite function here')
+        const cells = currentRow.children
+        for (let i = 6 + blackz; i < cells.length; i++) {
+            const cell = cells[i]
+            
+            console.log(whitez)
+            if (whitez > 0) {
+                cell.style.backgroundColor = 'pink'
+                whitez--
+            }
+            
+        }
     }
 
 
