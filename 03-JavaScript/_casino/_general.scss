@@ -1,0 +1,121 @@
+body, html {
+	overflow-y: hidden;
+	overflow-x: hidden;
+	height:848px;
+}
+
+#showpage {
+	background-image:url(img/badgercasinotemplate.png);
+	width: 846px;
+	height: 848px;
+	margin: auto;
+	background-repeat: no-repeat;
+	margin-top: 100px;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+a {
+  color: #7A963B;
+  text-decoration: none;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.btn {
+	background-color: #DEAA51;
+	border: none;
+	color: #fceab5;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 2px;
+	font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.btn-bet {
+	position: relative;
+	background-color: #DEAA51;
+	border: none;
+	color: #fceab5;
+	padding: 13px 28px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 2px;
+}
+
+#mise{
+	width: 846px;
+	text-align: center;
+	margin-top:50px;
+	margin-left:20px;
+}
+
+#btn-bets{
+	width: 846px;
+	margin-top:60px;
+	text-align: center;
+}
+
+#imagejackpot{
+	margin-left:210px;
+	margin-top:274px;
+	display: inline-block;
+
+	img#roue2 {
+		margin-left:26px
+	}
+
+	img#roue3 {
+		margin-left:27px
+	}
+}
+
+#resultat{
+	background-color: #DEAA51;
+	border: none;
+	color: #fceab5;
+	padding: 17px 50px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 25px;
+	font-weight: bold;
+	width: 400px;
+	margin-top: 150px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 2px;
+	height:25px;
+	font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+#btn-actions {
+	width: 846px;
+	text-align: center;
+	display:inline-block;
+	margin: 5px 0;
+
+	// #btn-play {
+	// }
+
+	// #btn-leave {
+	// }
+}
