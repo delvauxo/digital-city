@@ -13,14 +13,6 @@ body, html {
   margin-top: 100px;
 }
 
-.hide {
-  display: none;
-}
-
-.show {
-  display: block;
-}
-
 a {
   color: #7A963B;
   text-decoration: none;
@@ -46,19 +38,8 @@ a:hover {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.btn-bet {
-  position: relative;
-  background-color: #DEAA51;
-  border: none;
-  color: #fceab5;
-  padding: 13px 28px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 2px;
+.btn.btn-bet {
+  background-color: #a97620;
 }
 
 #mise {
@@ -80,6 +61,11 @@ a:hover {
   display: inline-block;
 }
 
+#imagejackpot img {
+  width: 120px;
+  height: 184px;
+}
+
 #imagejackpot img#roue2 {
   margin-left: 26px;
 }
@@ -88,7 +74,7 @@ a:hover {
   margin-left: 27px;
 }
 
-#resultat {
+#result {
   background-color: #DEAA51;
   border: none;
   color: #fceab5;
@@ -112,5 +98,9 @@ a:hover {
   text-align: center;
   display: inline-block;
   margin: 5px 0;
+}
+
+.hide {
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */

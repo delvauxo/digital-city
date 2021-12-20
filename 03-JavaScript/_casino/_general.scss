@@ -1,3 +1,6 @@
+$color-primary: #DEAA51;
+$color-secondary: #fceab5;
+
 body, html {
 	overflow-y: hidden;
 	overflow-x: hidden;
@@ -13,14 +16,6 @@ body, html {
 	margin-top: 100px;
 }
 
-.hide {
-	display: none;
-}
-
-.show {
-	display: block;
-}
-
 a {
   color: #7A963B;
   text-decoration: none;
@@ -33,9 +28,9 @@ a:hover {
 }
 
 .btn {
-	background-color: #DEAA51;
+	background-color: $color-primary;
 	border: none;
-	color: #fceab5;
+	color: $color-secondary;
 	padding: 15px 32px;
 	text-align: center;
 	text-decoration: none;
@@ -44,54 +39,49 @@ a:hover {
 	cursor: pointer;
 	border-radius: 2px;
 	font-family:Georgia, 'Times New Roman', Times, serif;
+
+	&.btn-bet {
+		background-color: darken($color-primary, 20);
+	}
 }
 
-.btn-bet {
-	position: relative;
-	background-color: #DEAA51;
-	border: none;
-	color: #fceab5;
-	padding: 13px 28px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 14px;
-	margin: 4px 2px;
-	cursor: pointer;
-	border-radius: 2px;
-}
 
 #mise{
 	width: 846px;
 	text-align: center;
-	margin-top:50px;
-	margin-left:20px;
+	margin-top: 50px;
+	margin-left: 20px;
 }
 
 #btn-bets{
 	width: 846px;
-	margin-top:60px;
+	margin-top: 60px;
 	text-align: center;
 }
 
 #imagejackpot{
-	margin-left:210px;
-	margin-top:274px;
+	margin-left: 210px;
+	margin-top: 274px;
 	display: inline-block;
 
-	img#roue2 {
-		margin-left:26px
-	}
+	img {
+		width: 120px;
+		height: 184px;
 
-	img#roue3 {
-		margin-left:27px
+		&#roue2 {
+			margin-left:26px
+		}
+
+		&#roue3 {
+			margin-left:27px
+		}
 	}
 }
 
-#resultat{
-	background-color: #DEAA51;
+#result {
+	background-color: $color-primary;
 	border: none;
-	color: #fceab5;
+	color: $color-secondary;
 	padding: 17px 50px;
 	text-align: center;
 	text-decoration: none;
@@ -118,4 +108,11 @@ a:hover {
 
 	// #btn-leave {
 	// }
+}
+
+
+// Generic.
+
+.hide {
+	display: none;
 }

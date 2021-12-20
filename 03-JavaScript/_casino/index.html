@@ -10,14 +10,18 @@
 	</head>
 	<body>
 		<div id="showpage">
+			
 			<div id='imagejackpot'>
-				<img id="roue1" width="120" height="184" src="img/6.png"></img>
-				<img id="roue2" width="120" height="184" src="img/6.png"></img>
-				<img id="roue3" width="120" height="184" src="img/6.png"></img>
+				<img id="roue1" src="img/6.png"></img>
+				<img id="roue2" src="img/6.png"></img>
+				<img id="roue3" src="img/6.png"></img>
 			</div>
 
 			<div id='btn-bets'>
-				<div id="resultat">Veuillez choisir votre mise !</div>
+				<div id="result">
+					<span id="result-warning" class="hide">Please choose your bet !</span>
+					<span id="result-display"></span>
+				</div>
 				<br />
 				<button class='btn' data-bet="100" >100$</button>
 				<button class='btn' data-bet="200" >200$</button>
