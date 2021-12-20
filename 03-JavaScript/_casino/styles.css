@@ -59,6 +59,7 @@ a:hover {
   margin-left: 210px;
   margin-top: 274px;
   display: inline-block;
+  position: relative;
 }
 
 #imagejackpot img {
@@ -72,6 +73,12 @@ a:hover {
 
 #imagejackpot img#roue3 {
   margin-left: 27px;
+}
+
+#imagejackpot #message-display {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 #result {
