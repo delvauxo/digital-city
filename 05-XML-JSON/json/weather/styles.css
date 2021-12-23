@@ -1,0 +1,28 @@
+#first-line {
+    display: flex;
+}
+
+#weather-icon {
+    display: inline-block;
+    background-color: lightgrey;
+    border-radius: 15px;
+}
+
+#weather-icon img {
+    width: 50px;
+}
+
+#city-name {
+    line-height: 52px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+#country-flag {
+    display: inline-block;
+    line-height: 50px;
+}
+
+#country-flag img {
+    vertical-align: middle;
+}
