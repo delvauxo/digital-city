@@ -1,0 +1,24 @@
+{
+  "name": "mon-premier-projet",
+  "version": "0.1.0",
+  "description": "Ma belle description de mon nouveau projet",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/delvauxo/mon-premier-projet-node.git"
+  },
+  "keywords": [
+    "demo",
+    "nodejs"
+  ],
+  "author": "Olivier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/delvauxo/mon-premier-projet-node/issues"
+  },
+  "homepage": "https://github.com/delvauxo/mon-premier-projet-node#readme"
+}
