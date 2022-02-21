@@ -16,9 +16,7 @@ server.on('request', (request, response) => {
             response.end(data)
         }
     })
-
     console.log('Il y a eu une requete !')
-
 })
 
 server.listen(8080)
