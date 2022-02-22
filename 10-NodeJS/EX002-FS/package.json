@@ -1,0 +1,12 @@
+{
+  "name": "demo02-file",
+  "version": "0.1.0",
+  "description": "Demo du module FS",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aurélien",
+  "license": "ISC"
+}
