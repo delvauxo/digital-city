@@ -1,0 +1,12 @@
+{
+  "name": "ex001-encrypt-msg",
+  "version": "0.1.0",
+  "description": "generate keys and save them. share it and use it to encrypt msg",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Me",
+  "license": "ISC"
+}

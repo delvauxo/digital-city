@@ -8,8 +8,6 @@ console.log(`Le ficher est dispo sur : '${filename}'`);
 const newFile = path.resolve('data', 'exemple.txt');
 console.log(`Le nouveau ficher est : '${newFile}'`);
 
-
-
 // Demo de la création d'un fichier
 const data = 'Zaza Vanderquack\n';
 fs.writeFile(newFile, data, { flag: 'a' }, (error) => {
@@ -22,7 +20,6 @@ fs.writeFile(newFile, data, { flag: 'a' }, (error) => {
 
     console.log('Ecriture OK ♥');
 });
-
 
 // Lecture du contenu du fichier via le module 'fs' (Async)
 fs.readFile(filename, (error, data) => {
@@ -39,7 +36,6 @@ fs.readFile(filename, (error, data) => {
     console.log('\nLe contenu "texte" du fichier est : ');
     console.log(data.toString('utf-8')); // Convertion sous forme de texte
 });
-
 
 // Obtenir les informations d'un element
 fs.stat(filename, (error, stats) => {
@@ -62,7 +58,6 @@ fs.stat(filename, (error, stats) => {
     }
     console.log('\n');
 });
-
 
 // Utilisation des flux
 fs.open(filename, 'r+', (error, fd) => {
@@ -89,8 +84,6 @@ fs.open(filename, 'r+', (error, fd) => {
         });
     }
 });
-
-
 
 // Lecture d'un fichier JSON (Sans utiliser "require")
 fs.readFile('./data/data.json', (error, data) => {
