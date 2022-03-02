@@ -1,22 +1,24 @@
-const http = require('http')
-const fs = require('fs')
+const http = require('http');
+const fs = require('fs');
 
-const server = http.createServer()
+const server = http.createServer();
 
 server.on('request', (request, response) => {
-    
+
+    console.log(request);
+
     fs.readFile('index.html', (err, data) => {
         if (err) {
-            response.writeHead(404)
-            response.end("Ce fichier n'existe pas !")
+            response.writeHead(404);
+            response.end("Ce fichier n'existe pas !");
         } else {
             response.writeHead(200, {
                 'Content-Type': 'text/html; charset=utf-8'
-            })
-            response.end(data)
+            });
+            response.end(data);
         }
-    })
-    console.log('Il y a eu une requete !')
-})
+    });
+    console.log('Il y a eu une requete !');
+});
 
-server.listen(8080)
+server.listen(8080);

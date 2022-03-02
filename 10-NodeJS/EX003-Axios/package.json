@@ -1,15 +1,15 @@
 {
-  "name": "demo02-file",
+  "name": "ex003-axios",
   "version": "0.1.0",
-  "description": "Demo du module FS",
+  "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Aurélien",
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.21"
+    "axios": "^0.26.0"
   }
 }
