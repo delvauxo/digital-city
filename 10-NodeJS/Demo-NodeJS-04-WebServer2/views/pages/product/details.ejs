@@ -1,0 +1,10 @@
+<%- include('../../partials/_header.ejs') %>
+<h1>Product Details</h1>
+<p>Voici les détails du produit :</p>
+<div>
+  <div>ID : <%= product.id %></div>
+  <div>Name : <%= product.name %></div>
+  <div>Description : <%= product.desc %></div>
+  <div>Price : <%= product.price %>€</div>
+</div>
+<%- include('../../partials/_footer.ejs') %>

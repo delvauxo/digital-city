@@ -1,0 +1,19 @@
+<%- include('../../partials/_header.ejs') %>
+<h1>Products list</h1>
+<p>Voici la liste des produits :</p>
+
+<div class="d-flex">
+  <% products.forEach(function(product){ %>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><%= product.name %></h5>
+      <p class="card-text"><%= product.desc %></p>
+      <p class="card-text"><%= product.price %>€</p>
+      <a href="product/<%= product.id %>" class="btn btn-primary btn-sm"
+        >View details</a
+      >
+    </div>
+  </div>
+  <% }); %>
+</div>
+<%- include('../../partials/_footer.ejs') %>
