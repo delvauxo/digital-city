@@ -1,5 +1,6 @@
 const express = require('express');
 const studentRouter = require('./routes/student-router');
+const profRouter = require('./routes/prof-router');
 
 
 // Création de l'app 'server'
@@ -44,6 +45,7 @@ app.get('/product/:id([0-9]+)/detail', (req, res) => {
 
 // Ajout du systeme de routage via l'objet Router!
 app.use(studentRouter);
+app.use(profRouter);
 
 // Démarrage du serveur sur le port 8080
 app.listen(8080, () => {
