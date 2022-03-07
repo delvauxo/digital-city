@@ -1,0 +1,26 @@
+{
+  "name": "demo-express-02-routage",
+  "version": "0.1.0",
+  "description": "Demo de ExpressJS avec le Routing",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "NodeJs",
+    "ExpressJS",
+    "Demo",
+    "Routing",
+    "Ayan"
+  ],
+  "author": "Aurélien",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
