@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const profRouter = express.Router();
 
 profRouter.get('/prof', (req, res) => {
@@ -11,6 +12,25 @@ profRouter.get('/prof/notfound', (req, res) => {
 
 profRouter.get('/prof/notfoundbis', (req, res) => {
     res.sendStatus(404);
+});
+
+profRouter.get('/prof/redirection', (req, res) => {
+    res.redirect('/prof');
+});
+
+profRouter.get('/prof/file/:filename', (req, res) => {
+
+    const filePath = path.resolve(process.cwd(), 'data', req.params.filename);
+
+    res.sendFile(filePath, (err) => {
+        if (err) {
+            console.log(err);
+            res.sendStatus(404);
+        }
+        else {
+            console.log('File sent !');
+        }
+    });
 });
 
 module.exports = profRouter;
