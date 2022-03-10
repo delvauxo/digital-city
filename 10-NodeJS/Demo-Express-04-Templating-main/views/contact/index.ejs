@@ -1,0 +1,25 @@
+<%- include('../partials/header.ejs') %>
+    
+    <h1>Contact</h1>
+    <form method="POST">
+        <div>
+          <label for="email">Email :</label>
+          <input type="email" name="email" required />
+        </div>
+        <div>
+          <label for="category">Category :</label>
+          <select name="category" id="category" required>
+                <option value="" disabled></option>
+                <% category.forEach(function(category){ %>
+                    <option value="<%= category %>"><%= category %></option>
+                <% }); %>
+            </select>
+        </div>
+        <div>
+          <label for="message">Message :</label>
+          <textarea name="message" required></textarea>
+        </div>
+        <button type="submit">Envoyer</button>
+      </form>
+
+<%- include('../partials/footer.ejs') %>

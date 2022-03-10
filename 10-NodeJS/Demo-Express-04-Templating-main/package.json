@@ -1,0 +1,30 @@
+{
+  "name": "demo-express-04-templating",
+  "version": "0.1.0",
+  "description": "Demo de l'utilisation de template (ejs)",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Form-JS/Demo-Express-04-Templating.git"
+  },
+  "author": "Aurélien",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Form-JS/Demo-Express-04-Templating/issues"
+  },
+  "homepage": "https://github.com/Form-JS/Demo-Express-04-Templating#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "dayjs": "^1.10.8",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
