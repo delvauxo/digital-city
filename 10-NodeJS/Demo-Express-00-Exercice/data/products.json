@@ -1,0 +1,102 @@
+[
+      {
+        "id": 1,
+        "name": "Tomate",
+        "category": "vegetable",
+        "origin": "France",
+        "stock": "15",
+        "price_sell": "3",
+        "supplier": "Delhaize",
+        "price_supplier": "1"
+      },
+      {
+        "id": 2,
+        "name": "Cerise",
+        "category": "fruit",
+        "origin": "Spain",
+        "stock": "5",
+        "price_sell": "9",
+        "supplier": "Delhaize",
+        "price_supplier": "5"
+      },
+      {
+        "id": 3,
+        "name": "Peche",
+        "category": "fruit",
+        "origin": "Italy",
+        "stock": "16",
+        "price_sell": "5",
+        "supplier": "Carrefour",
+        "price_supplier": "3"
+      },
+      {
+        "id": 4,
+        "name": "Banane",
+        "category": "fruit",
+        "origin": "Somalia",
+        "stock": "20",
+        "price_sell": "3",
+        "supplier": "Lidl",
+        "price_supplier": "2"
+      },
+      {
+        "id": 5,
+        "name": "Pomme",
+        "category": "fruit",
+        "origin": "Antarctica",
+        "stock": "20",
+        "price_sell": "3",
+        "supplier": "Carrefour",
+        "price_supplier": "2"
+      },
+      {
+        "id": 6,
+        "name": "Poire",
+        "category": "fruit",
+        "origin": "Belgium",
+        "stock": "20",
+        "price_sell": "4",
+        "supplier": "Lidl",
+        "price_supplier": "1"
+      },
+      {
+        "id": 7,
+        "name": "Fraise",
+        "category": "fruit",
+        "origin": "Spain",
+        "stock": "100",
+        "price_sell": "1",
+        "supplier": "Lidl",
+        "price_supplier": "0.5"
+      },
+      {
+        "id": 8,
+        "name": "Orange",
+        "category": "fruit",
+        "origin": "Greece",
+        "stock": "20",
+        "price_sell": "4",
+        "supplier": "Carrefour",
+        "price_supplier": "1"
+      },
+      {
+        "id": 9,
+        "name": "Prune",
+        "category": "fruit",
+        "origin": "Ireland",
+        "stock": "15",
+        "price_sell": "4",
+        "supplier": "Carrefour",
+        "price_supplier": "1"
+      },
+      {
+        "id": 10,
+        "name": "Carotte",
+        "category": "vegetable",
+        "origin": "Germany",
+        "stock": "50",
+        "price_sell": "3.5",
+        "supplier": "Lidl",
+        "price_supplier": "2"
+      }
+    ]
