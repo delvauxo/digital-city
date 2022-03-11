@@ -4,7 +4,10 @@
 
     <ul>
         <% products.forEach((product) => { %>
-        <li><%= product.name %></li>
+        <li>
+            <img src="<%= product.img %>" alt="<%= product.name %>">
+            <a href="/products/<%= product.id %>"><%= product.name %></a>
+        </li>
         <% }) %>
     </ul>
 

@@ -1,5 +1,7 @@
 const { Request, Response } = require('express');
 const products = require('../data/products.json');
+const { schemaContact } = require('../validations/validator-form-contact');
+
 
 const homeController = {
 
@@ -13,6 +15,23 @@ const homeController = {
 
     products: (req, res) => {
         res.render('home/products', { products });
+    },
+
+    /**
+     * @param {Request} req 
+     * @param {Response} res 
+     */
+    product: (req, res) => {
+
+        // Get product with same ID passed in url.
+        const product = products.filter((product) => parseInt(req.params.id) === product.id);
+
+        if (product.length > 0) {
+            res.render('home/productDetails', { product: product[0] });
+        }
+        else {
+            res.status(404).render('home/productNotFound', { productId: req.params.id });
+        }
     },
 
     /**
@@ -36,7 +55,18 @@ const homeController = {
      * @param {Response} res 
      */
     contactPost: (req, res) => {
-        res.render('home/contactResponse');
+
+        schemaContact.validate(req.body, { abortEarly: false })
+            .then(data => {
+                console.log(data);
+                res.render('home/contactResponse', { data: req.body });
+            })
+            .catch(err => {
+                console.log(err);
+                res.redirect('contact');
+            });
+
+
     },
 
     /**

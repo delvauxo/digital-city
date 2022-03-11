@@ -11,7 +11,10 @@ homeRouter.get(['/index', '/home'], (req, res) => {
     res.redirect('/');
 });
 
+// Products page.
 homeRouter.get('/products', homeController.products);
+// Detailed product page.
+homeRouter.get('/products/:id', homeController.product);
 
 // Gallery page.
 homeRouter.get('/gallery', homeController.gallery);

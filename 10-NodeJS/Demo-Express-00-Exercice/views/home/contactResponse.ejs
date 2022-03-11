@@ -1,7 +1,13 @@
 <%- include('../partials/header.ejs') %>
 
     <h1>Contact</h1>
-    <h2>Your message has been sent.</h2>
+    <p>Dear <%= data.pseudo %>,</p>
+    <p>Your message :</p>
+    <p><%= data.message %></p>
+    <p>has been sent.</p>
+
+    <br>
+    
     <a href="./">Return Home</a>
 
 <%- include('../partials/footer.ejs') %>
