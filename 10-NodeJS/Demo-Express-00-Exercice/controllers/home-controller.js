@@ -65,8 +65,6 @@ const homeController = {
                 console.log(err);
                 res.redirect('contact');
             });
-
-
     },
 
     /**
