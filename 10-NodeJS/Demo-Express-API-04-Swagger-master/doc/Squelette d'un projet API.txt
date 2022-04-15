@@ -1,0 +1,30 @@
+Squelette de base d'un projet API
+**********************************
+ - app.js
+Créer le serveur, le configurer et le démarrer
+
+ - package.json
+La configuration du projet (nom, version, scripts, dépendences, etc...)
+
+ - routes/<element-router>
+L'ensemble des 'endpoints' (url) accessible, lier au controller adéquat
+
+ - controllers/<element-controller>
+Réaliser l'ensemble d'actions necessaires et envois une réponse au client
+
+ - models/<element>
+Les méthodes d'acces aux données (Donnéées statiques, json, base de données, etc...)
+
+Aller plus loin
+***************
+ - validators/<element-validator>
+Ensemble de regle pour valider les données reçus
+
+ - middlewares/<element>
+Ensemble de "comportement" à intégré dans le fonctionnement du serveur ou des routes
+
+ - response-schemas/<element>
+Définition les objets de réponse utiliser par le serveur API
+
+ - .env
+Ensemble de fichier d'environement chargé dans la config du serveur

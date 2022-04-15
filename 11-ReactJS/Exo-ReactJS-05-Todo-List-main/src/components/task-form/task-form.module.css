@@ -1,0 +1,24 @@
+.form > div {
+    display: flex;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.form > div > label {
+    flex-basis: 100px;
+}
+
+.form > div > label::after {
+    content: ':';
+    margin-left: 0.5ch;
+    margin-right: 0.5ch;
+}
+
+.form > div > input, .form > div > textarea {
+    flex-grow: 1;
+}
+
+.invalidInput {
+    border-color: crimson;
+    background-color: rgba(255, 130, 155, 0.26);
+}

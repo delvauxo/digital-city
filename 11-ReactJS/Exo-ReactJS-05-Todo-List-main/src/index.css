@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(222, 222, 222);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+textarea,
+input,
+select {
+  font-family: 'Comic Sans MS';
+  font-size: 0.8rem;
+  resize: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 1px 5px;
+}

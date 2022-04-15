@@ -1,0 +1,43 @@
+{
+    "commande": {
+        "numero": 30188,
+        "date": "02-01-2009",
+        "total": 69720
+    },
+    "client": {
+        "numero": "B512",
+        "nom": "Gillet",
+        "adresse": "14, r. de l'Été",
+        "localite": "Toulouse"
+    },
+    "produits": [
+        {
+            "numero": "CS464",
+            "libelle": "Chev. sapin 400x6x4",
+            "prix": 220,
+            "quantite": 180,
+            "sous-total": 39600
+        },
+        {
+            "numero": "PA45",
+            "libelle": "Pointe acier 45 (20k)",
+            "prix": 105,
+            "quantite": 22,
+            "sous-total": 2310
+        },
+        {
+            "numero": "PA60",
+            "libelle": "Pointe acier 60 (10k)",
+            "prix": 95,
+            "quantite": 70,
+            "sous-total": 6650
+        },
+        {
+            "numero": "PH222",
+            "libelle": "Pl. hetre 200x20x2",
+            "prix": 230,
+            "quantite": 92,
+            "sous-total": 21160
+        }
+    ]
+}
